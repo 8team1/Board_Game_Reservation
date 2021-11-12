@@ -52,6 +52,69 @@ public class MemberDao {
 		return -1; //로그인 실패
 	}
 	
+	public String findID(String name, String phone) { //아이디 찾는 함수
+		//1. DB 연결
+		conn = DBConnection.getConnection();
+		
+		try {
+			//2. Query 작성
+			pstmt = conn.prepareStatement("select * from member where name = ? and phone = ?");
+			
+			//3. Query ? 부분 완성 (index 1번 부터 시작)
+			//setString, setInt, setDouble, setTimeStamp 등이 있음.
+			pstmt.setString(1, name);
+			pstmt.setString(2, phone);
+			
+			//4. Query 실행
+			//(1) executeQuery() = select = ResultSet 리턴
+			//(2) executeUpdate() = insert, update, delete = 리턴 없음.
+			rs = pstmt.executeQuery();
+			
+			//5. rs는 query한 결과의 첫번째 행(레코드) 직전에 대기중
+			//결과가 count(*) 그룹함수이기 때문에 1개의 행이 리턴됨. while문이 필요 없음.
+			if(rs.next()) { //찾음
+				return "아이디는 "+rs.getString("username")+"입니다"; //아이디 리턴
+			}		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		
+		return "회원정보가 없습니다"; //아이디 없음
+	}
+	
+	
+	public String findPW(String name, String phone) { //아이디 찾는 함수
+		//1. DB 연결
+		conn = DBConnection.getConnection();
+		
+		try {
+			//2. Query 작성
+			pstmt = conn.prepareStatement("select * from member where name = ? and phone = ?");
+			
+			//3. Query ? 부분 완성 (index 1번 부터 시작)
+			//setString, setInt, setDouble, setTimeStamp 등이 있음.
+			pstmt.setString(1, name);
+			pstmt.setString(2, phone);
+			
+			//4. Query 실행
+			//(1) executeQuery() = select = ResultSet 리턴
+			//(2) executeUpdate() = insert, update, delete = 리턴 없음.
+			rs = pstmt.executeQuery();
+			
+			//5. rs는 query한 결과의 첫번째 행(레코드) 직전에 대기중
+			//결과가 count(*) 그룹함수이기 때문에 1개의 행이 리턴됨. while문이 필요 없음.
+			
+			if(rs.next()) { //찾음
+				return "패스워드는 "+rs.getString("password")+"입니다"; //패스워드 리턴
+			}		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		
+		return "회원정보가 없습니다"; //패스워드 없음
+	}
+	
+	
 	//성공 1, 실패 -1, 
 	public int save(Member member) { //DB에 데이터 저장
 		conn = DBConnection.getConnection();
@@ -97,6 +160,12 @@ public class MemberDao {
 
 		return null;
 	}
+	
+//	public String searchID(String name,String phone)
+//	{
+//		conn=DBConnection.getConnection();
+//		
+//	}
 }
 
 

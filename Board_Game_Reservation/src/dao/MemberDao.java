@@ -126,7 +126,7 @@ public class MemberDao {
 			pstmt.setString(3, member.getName());
 			pstmt.setString(4, member.getEmail());
 			pstmt.setString(5, member.getPhone());
-			pstmt.executeUpdate(); //return값은 처리된 레코드의 개수
+			pstmt.executeQuery(); //return값은 처리된 레코드의 개수
 			return 1;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -134,6 +134,22 @@ public class MemberDao {
 		return -1;
 	}
 	
+	public void delete(String id)
+	{
+		conn=DBConnection.getConnection();
+		String sql="delete from member where id=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.executeUpdate();
+			
+		} catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
 	//성공 Vector<Member>, 실패 null
 	public Vector<Member> findByAll(){
 		conn = DBConnection.getConnection();
@@ -161,11 +177,7 @@ public class MemberDao {
 		return null;
 	}
 	
-//	public String searchID(String name,String phone)
-//	{
-//		conn=DBConnection.getConnection();
-//		
-//	}
+
 }
 
 

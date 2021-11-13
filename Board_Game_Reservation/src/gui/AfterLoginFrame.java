@@ -41,12 +41,12 @@ public class AfterLoginFrame extends JFrame{
 		contentPane.setLayout(null);
 		
 		listBtn = new JButton("회원정보");  ///회원정보 버튼
-		listBtn.setBounds(135, 154, 106, 29);
+		listBtn.setBounds(180, 154, 106, 29);
 		contentPane.add(listBtn);
 		
 		
 		reserveBtn = new JButton("예약하기"); //예약버튼
-		reserveBtn.setBounds(135, 74, 106, 29);
+		reserveBtn.setBounds(180, 74, 106, 29);
 		contentPane.add(reserveBtn);
 		
 		setVisible(true);

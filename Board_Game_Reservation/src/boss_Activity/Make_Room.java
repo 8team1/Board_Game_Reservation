@@ -7,6 +7,7 @@ import javax.accessibility.AccessibleContext;
 import rooms.Rooms;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import rooms.Shuju;
 
 public class Make_Room {
 	/*
@@ -17,6 +18,8 @@ public class Make_Room {
 	JButton res_cancelGlobal = new JButton();
 	JButton res_to_startGlobal = new JButton();
 	*/
+	
+	Shuju shu = new Shuju();
 	
 	void setButton(Main_Activity ma, Rooms newRoom, int xpos, int ypos, int flag)
 	{	
@@ -357,8 +360,9 @@ public class Make_Room {
 				
 				int finalPrice = (endtime - starttime) * 100;
 			
+				//finalPrice = finalPrice + shu.getTotalPrice();
 				// 정산 창을 열게 해주는 코드
-				ba.finalFrame(finalPrice);
+				ba.finalFrame(finalPrice, flag);
 				
 				room.setVisible(true);				// room 투명화
 				roomres.setVisible(false);				// roomres 가시화

@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import rooms.Rooms;
 import rooms.Shuju;
+import rooms.Shuju2;
 
 
 import java.awt.*;
@@ -21,46 +22,50 @@ import javax.swing.*;
 public class Button_Actioned {
 
 	Shuju[] shu = new Shuju [4];
+	Shuju2[] shu2 = new Shuju2 [4];
 	
 	JButton btn1 = new JButton("음료수");
 	JButton btn2 = new JButton("음식");
 	JButton confirm = new JButton("확인");
 	JButton cancel = new JButton("취소");
 	
-	public void getFoodPanel(Main_Activity ma, Make_Room mr, int flag)
+	public void getFoodPanel(Main_Activity ma, Make_Room mr, int flag )
 	{	
 		for (int i = 0; i < 4; i++)
 		{
 			shu[i] = new Shuju();
 		}
+		for (int j = 0; j < 4; j++)
+		{
+			shu2[j] = new Shuju2();
+		}
 		
 		Button btn1 = new Button("음료수");
 		Button btn2 = new Button("음식");
-		Dialog dialog = new Dialog(ma,"My dialog");
+		JDialog dialog = new JDialog(ma,"My dialog");
 		 Label lab1 = new Label("선택하세요");
 		 JCheckBox jcb1 = new JCheckBox();
-		 jcb1.add(new JLabel("에스프레소1500"));
+		 jcb1.add(new JLabel("     에스프레소1500"));
 		 JCheckBox jcb2 = new JCheckBox();
-		 jcb2.add(new JLabel("아메리카노2000"));
+		 jcb2.add(new JLabel("     아메리카노2000"));
 		  JCheckBox cb3 = new JCheckBox();
-		  cb3.add(new JLabel("더치1500"));
+		  cb3.add(new JLabel("     더치1500"));
 		  JCheckBox cb4 = new JCheckBox("카페라떼2500");
-		JCheckBox cb5 = new JCheckBox("카푸치노2000");
-		  JCheckBox cb6 = new JCheckBox("카페모카3000");
-		  JCheckBox cb7 = new JCheckBox("캬라멜카페모카3500");
-		  JCheckBox cb8 = new JCheckBox("카페비엔나3000");
+		
 		  Button btn3 = new Button("확인");
+		  Container ct2 = ma.getContentPane();
+		  Button btn19= new Button("계산");
+		  Label lab13=new Label("총 가격:");
+		  
+		  
 		 
-		  Dialog dialog2 = new Dialog(ma,"My dialog2");
+		  JDialog dialog2 = new JDialog(ma,"My dialog2");
 		  Label lab2 = new Label("선택하세요");
-		  Checkbox cb12 = new Checkbox("애플타르트");
-		  Checkbox cb22 = new Checkbox("쿠키슈");
-		  Checkbox cb32 = new Checkbox("스틱케익");
-		  Checkbox cb42 = new Checkbox("치즈타르트");
-		  Checkbox cb52 = new Checkbox("치즈 케이크");
-		  Checkbox cb62 = new Checkbox("과일 케이크");
-		  Checkbox cb72 = new Checkbox("찬 디저트");
-		  Checkbox cb82 = new Checkbox("바바루아");
+		  JCheckBox cb12 = new JCheckBox("애플타르트1500");
+		  JCheckBox cb22 = new JCheckBox("쿠키슈2000");
+		  JCheckBox cb32 = new JCheckBox("스틱케익1500");
+		  JCheckBox cb42 = new JCheckBox("치즈타르트2500");
+
 		  Button btn4 = new Button("확인");
 		  
 		  Container ct = ma.getContentPane();
@@ -80,27 +85,31 @@ public class Button_Actioned {
 	      			  lab1.setBounds(225,50,150,20);
 	      			  dialog2.add(lab1);
 	      			
-	      			  btn4.setBounds(550,550,70,30);
+	      			  btn4.setBounds(550,500,70,30);
 	      			  dialog2.add(btn4);
 	      			 
-	      			  cb12.setBounds(200,100,100,50);
+	      			  cb12.setBounds(200,100,150,50);
 	      			  dialog2.add(cb12);
-	        		  cb22.setBounds(400,100,100,50);
+	        		  cb22.setBounds(400,100,150,50);
 	        		  dialog2.add(cb22);
-	        		  cb32.setBounds(200,200,100,50);
+	        		  cb32.setBounds(200,200,150,50);
 	      			  dialog2.add(cb32);
-	      			  cb42.setBounds(400,200,100,50);
+	      			  cb42.setBounds(400,200,150,50);
 	     			  dialog2.add(cb42);
-	     			  cb52.setBounds(200,300,100,50);
-	     			  dialog2.add(cb52);
-	     			  cb62.setBounds(400,300,100,50);
-	     			  dialog2.add(cb62);
-	     			  cb72.setBounds(200,400,100,50);
-	     			  dialog2.add(cb72);
-	     			  cb82.setBounds(400,400,100,50);
-	     			  dialog2.add(cb82);
-	        		  dialog2.setVisible(true);
+	     			
+	     			 // dialog2.setDefaultCloseOperation(ma.EXIT_ON_CLOSE);
+	        		 
 	        		  
+	        		//fff  
+		     			 lab13.setBounds(300,450,150,20);
+		      			  dialog2.add(lab13);
+	        		  
+	        		  btn19.setBounds(500,450,100,20);
+	      			  dialog2.add(btn19);
+	      			  //dialog.setDefaultCloseOperation(ma.EXIT_ON_CLOSE);
+	      	 		  dialog2.setVisible(true);
+	      			  //kkkk  
+	      	 		  
 	        		  
 	        		  
 	      			}
@@ -119,7 +128,7 @@ public class Button_Actioned {
 	     			  lab2.setBounds(225,50,150,20);
 	     			  dialog.add(lab2);
 	     			  
-	     			  btn3.setBounds(550,550,70,30);
+	     			  btn3.setBounds(550,500,70,30);
 	     			  dialog.add(btn3);
 	     			//fff  
 	     			 lab3.setBounds(300,450,150,20);
@@ -133,18 +142,11 @@ public class Button_Actioned {
 	     			  dialog.add(cb3);
 	     			  cb4.setBounds(400,200,150,50);
 	    			  dialog.add(cb4);
-	    			  cb5.setBounds(200,300,150,50);
-	    			  dialog.add(cb5);
-	    			  cb6.setBounds(400,300,150,50);
-	    			  dialog.add(cb6);
-	    			  cb7.setBounds(200,400,150,50);
-	    			  dialog.add(cb7);
-	    			  cb8.setBounds(400,400,150,50);
-	    			  dialog.add(cb8);
-	    			  
+	    			 
 	    			  
 	    				 btn9.setBounds(500,450,100,20);
 		      			  dialog.add(btn9);
+		      			  //dialog.setDefaultCloseOperation(ma.EXIT_ON_CLOSE);
 		      	 		  dialog.setVisible(true);
 		      			  //kkkk  
 		      	 		  
@@ -176,14 +178,7 @@ public class Button_Actioned {
   	       			      shu[flag].amount += 1500;
 	   	            if( cb4.isSelected())
 	       			      shu[flag].amount += 2500;
-	   	           if( cb5.isSelected())
-       			          amount += 2000;
-	   	           if( cb6.isSelected())
-    			          amount += 3000;
-	   	            if( cb7.isSelected())
-    			          amount += 3500;
-	   	            if( cb8.isSelected())
-    			          amount += 3000;
+	   	           
 	   	       		 lab3.setText("총 가격:" +Integer.toString(shu[flag].amount));
 	   	       		 shu[flag].setTotalPrice(shu[flag].getTotalPrice() +shu[flag]. amount);
 	   	       		 // 디버그. 확인용...
@@ -193,6 +188,31 @@ public class Button_Actioned {
 	     			}
   			  
    	 		
+
+	     			else if(btn==btn19)
+	     			{
+	     				 dialog2.setLayout(null);
+	     				 
+	     				 
+		      			  
+	     				 int amount2=0;
+	     				 
+	   	       		 if( cb12.isSelected())
+	   	       			  shu2[flag].amount2 += 1500;
+	   	       		 if( cb22.isSelected())
+	   	       			  shu2[flag].amount2 += 2000;
+	   	       	    if( cb32.isSelected())
+  	       			      shu2[flag].amount2 += 1500;
+	   	            if( cb42.isSelected())
+	       			      shu2[flag].amount2 += 2500;
+	   	           
+	   	       		 lab13.setText("총 가격:" +Integer.toString(shu2[flag].amount2));
+	   	       		 shu2[flag].setTotalPrice(shu2[flag].getTotalPrice() +shu2[flag]. amount2);
+	   	       		 // 디버그. 확인용...
+	   	       		 System.out.println(shu2[flag].getTotalPrice());
+	   	       	     dialog2.setVisible(true);
+	   	       		 
+	     			}
 	       		  
 	       		  
 	       		  
@@ -218,6 +238,8 @@ public class Button_Actioned {
 			 ma.setBackground(Color.yellow);
 			 btn1.addActionListener(new MyListener());
 			 btn9.addActionListener(new MyListener());
+			 btn19.addActionListener(new MyListener());
+			
 			 btn3.addActionListener(new MyListener());
 			 btn4.addActionListener(new MyListener());
 			 btn2.addActionListener(new MyListener());

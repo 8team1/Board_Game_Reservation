@@ -13,6 +13,8 @@ import java.util.Date;
 import rooms.Rooms;
 import rooms.Shuju;
 import rooms.Shuju2;
+import javax.swing.ImageIcon;
+import java.awt.Image;
 
 
 import java.awt.*;
@@ -73,7 +75,54 @@ public class Button_Actioned {
 		  Label lab3=new Label("총 가격:");
 		  
 		
-		
+		  ImageIcon source_esspresso = new ImageIcon("src/images/esspresso.jpg"); 
+		  Image ess = source_esspresso.getImage(); //imageicon을 image로 변환
+		  Image change_ess=ess.getScaledInstance(100,100,Image.SCALE_SMOOTH);  ////에스프레소
+		  ImageIcon change_esspresso=new ImageIcon(change_ess);
+		  JLabel lbl_ess=new JLabel();
+			 
+		  ImageIcon source_americano = new ImageIcon("src/images/americano.jpg"); 
+		  Image ame = source_americano.getImage(); //imageicon을 image로 변환
+		  Image change_ame=ame.getScaledInstance(100,100,Image.SCALE_SMOOTH);
+		  ImageIcon change_americano=new ImageIcon(change_ame);
+		  JLabel lbl_ame=new JLabel();
+		  
+		  ImageIcon source_dutch = new ImageIcon("src/images/dutch.jpg"); 
+		  Image dutch = source_dutch.getImage(); //imageicon을 image로 변환
+		  Image change_dut=dutch.getScaledInstance(100,100,Image.SCALE_SMOOTH);
+		  ImageIcon change_dutch=new ImageIcon(change_dut);
+		  JLabel lbl_dutch=new JLabel();
+		  
+		  ImageIcon source_cafelatte = new ImageIcon("src/images/cafelatte.jpg"); 
+		  Image cafe = source_cafelatte.getImage(); //imageicon을 image로 변환
+		  Image change_cafe=cafe.getScaledInstance(100,100,Image.SCALE_SMOOTH);
+		  ImageIcon change_cafelatte=new ImageIcon(change_cafe);
+		  JLabel lbl_cafelatte=new JLabel();
+		  
+		  ImageIcon source_apple = new ImageIcon("src/images/appletarrt.jpg"); 
+		  Image apple = source_apple.getImage(); //imageicon을 image로 변환
+		  Image change_apple=apple.getScaledInstance(100,100,Image.SCALE_SMOOTH);
+		  ImageIcon change_appletarrt=new ImageIcon(change_apple);
+		  JLabel lbl_appletarrt=new JLabel();
+		  
+		  ImageIcon source_cookie = new ImageIcon("src/images/cookiesu.png"); 
+		  Image cookie = source_cookie.getImage(); //imageicon을 image로 변환
+		  Image change_cookie=cookie.getScaledInstance(100,100,Image.SCALE_SMOOTH);
+		  ImageIcon change_cookiesu=new ImageIcon(change_cookie);
+		  JLabel lbl_cookiesu=new JLabel();
+		  
+		  ImageIcon source_stick = new ImageIcon("src/images/stickcake.jpg"); 
+		  Image stick = source_stick.getImage(); //imageicon을 image로 변환
+		  Image change_stick=stick.getScaledInstance(100,100,Image.SCALE_SMOOTH);
+		  ImageIcon change_stickcake=new ImageIcon(change_stick);
+		  JLabel lbl_stickcake=new JLabel();
+		  
+		  ImageIcon source_cheese = new ImageIcon("src/images/cheesetarrt.jpg"); 
+		  Image cheese = source_cheese.getImage(); //imageicon을 image로 변환
+		  Image change_cheese=cheese.getScaledInstance(100,100,Image.SCALE_SMOOTH);
+		  ImageIcon change_cheesetarrt=new ImageIcon(change_cheese);
+		  JLabel lbl_cheesetarrt=new JLabel();
+		  
 		class MyListener implements ActionListener{
 	       	  public void actionPerformed(ActionEvent e) {
 	       		  Button btn = (Button) e.getSource();
@@ -82,7 +131,7 @@ public class Button_Actioned {
 	      			{
 	      			  dialog2.setLayout(null);
 	      			  dialog2.setSize(700,600);
-	      			  lab1.setBounds(225,50,150,20);
+	      			  lab1.setBounds(300,50,150,20);
 	      			  dialog2.add(lab1);
 	      			
 	      			  btn4.setBounds(550,500,70,30);
@@ -90,11 +139,11 @@ public class Button_Actioned {
 	      			 
 	      			  cb12.setBounds(200,100,150,50);
 	      			  dialog2.add(cb12);
-	        		  cb22.setBounds(400,100,150,50);
+	        		  cb22.setBounds(380,100,150,50);
 	        		  dialog2.add(cb22);
 	        		  cb32.setBounds(200,200,150,50);
 	      			  dialog2.add(cb32);
-	      			  cb42.setBounds(400,200,150,50);
+	      			  cb42.setBounds(380,200,150,50);
 	     			  dialog2.add(cb42);
 	     			
 	     			 // dialog2.setDefaultCloseOperation(ma.EXIT_ON_CLOSE);
@@ -110,7 +159,25 @@ public class Button_Actioned {
 	      	 		  dialog2.setVisible(true);
 	      			  //kkkk  
 	      	 		  
-	        		  
+	      	 		  lbl_appletarrt.setIcon(change_appletarrt);
+	    			  lbl_appletarrt.setBounds(70,80,100,100);
+	    			  lbl_appletarrt.setHorizontalAlignment(JLabel.CENTER);
+	    			  dialog2.getContentPane().add(lbl_appletarrt);
+	    			 
+	    			  lbl_cookiesu.setIcon(change_cookiesu);
+	    			  lbl_cookiesu.setBounds(530,80,100,100);
+	    			  lbl_cookiesu.setHorizontalAlignment(JLabel.CENTER);
+	    			  dialog2.getContentPane().add(lbl_cookiesu);
+		    			  
+	    			  lbl_stickcake.setIcon(change_stickcake);
+	    			  lbl_stickcake.setBounds(70,200,100,100);
+	    			  lbl_stickcake.setHorizontalAlignment(JLabel.CENTER);
+	    			  dialog2.getContentPane().add(lbl_stickcake);
+	    			  
+	    			  lbl_cheesetarrt.setIcon(change_cheesetarrt);
+	    			  lbl_cheesetarrt.setBounds(530,200,100,100);
+	    			  lbl_cheesetarrt.setHorizontalAlignment(JLabel.CENTER);
+	    			  dialog2.getContentPane().add(lbl_cheesetarrt);
 	        		  
 	      			}
 	      			else if(btn==btn4)
@@ -125,7 +192,7 @@ public class Button_Actioned {
 	     			    
 	     			
 	     			  dialog.setSize(700,600);
-	     			  lab2.setBounds(225,50,150,20);
+	     			  lab2.setBounds(300,50,150,20);
 	     			  dialog.add(lab2);
 	     			  
 	     			  btn3.setBounds(550,500,70,30);
@@ -136,22 +203,39 @@ public class Button_Actioned {
 		      	
 	     			  jcb1.setBounds(200,100,130,50);
 	     			  dialog.add(jcb1);
-	       		  jcb2.setBounds(400,100,130,50);
-	       		  dialog.add(jcb2);
-	       		  cb3.setBounds(200,200,150,50);
+	     			  jcb2.setBounds(380,100,130,50);
+	     			  dialog.add(jcb2);
+	     			  cb3.setBounds(200,200,150,50);
 	     			  dialog.add(cb3);
-	     			  cb4.setBounds(400,200,150,50);
+	     			  cb4.setBounds(380,200,150,50);
 	    			  dialog.add(cb4);
 	    			 
 	    			  
-	    				 btn9.setBounds(500,450,100,20);
-		      			  dialog.add(btn9);
+	    			  btn9.setBounds(500,450,100,20);
+	    			  dialog.add(btn9);
 		      			  //dialog.setDefaultCloseOperation(ma.EXIT_ON_CLOSE);
-		      	 		  dialog.setVisible(true);
+	    			  dialog.setVisible(true);
 		      			  //kkkk  
 		      	 		  
-		      	 
+	    			  lbl_ess.setIcon(change_esspresso);
+	    			  lbl_ess.setBounds(70,80,100,100);
+	    			  lbl_ess.setHorizontalAlignment(JLabel.CENTER);
+	    			  dialog.getContentPane().add(lbl_ess);
 	    			 
+	    			  lbl_ame.setIcon(change_americano);
+	    			  lbl_ame.setBounds(530,80,100,100);
+	    			  lbl_ame.setHorizontalAlignment(JLabel.CENTER);
+	    			  dialog.getContentPane().add(lbl_ame);
+		    			  
+	    			  lbl_dutch.setIcon(change_dutch);
+	    			  lbl_dutch.setBounds(70,200,100,100);
+	    			  lbl_dutch.setHorizontalAlignment(JLabel.CENTER);
+	    			  dialog.getContentPane().add(lbl_dutch);
+	    			  
+	    			  lbl_cafelatte.setIcon(change_cafelatte);
+	    			  lbl_cafelatte.setBounds(530,200,100,100);
+	    			  lbl_cafelatte.setHorizontalAlignment(JLabel.CENTER);
+	    			  dialog.getContentPane().add(lbl_cafelatte);
 	     			}
 	      			
 	       		

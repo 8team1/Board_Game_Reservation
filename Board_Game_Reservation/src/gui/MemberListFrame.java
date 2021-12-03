@@ -51,7 +51,7 @@ public class MemberListFrame extends JFrame {
 
 	public MemberListFrame(String username) {
 		this.username = username;
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 1032, 584);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();

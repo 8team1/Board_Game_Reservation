@@ -28,7 +28,7 @@ public class FindFrame extends JFrame{
 	}
 	public FindFrame()
 	{
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setSize(500, 300);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();

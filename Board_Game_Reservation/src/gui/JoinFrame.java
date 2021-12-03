@@ -49,7 +49,7 @@ public class JoinFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public JoinFrame() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setSize(430, 490);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();

@@ -26,10 +26,10 @@ public class Button_Actioned {
 	Shuju[] shu = new Shuju [4];
 	Shuju2[] shu2 = new Shuju2 [4];
 	
-	JButton btn1 = new JButton("À½·á¼ö");
-	JButton btn2 = new JButton("À½½Ä");
-	JButton confirm = new JButton("È®ÀÎ");
-	JButton cancel = new JButton("Ãë¼Ò");
+	JButton btn1 = new JButton("ìŒë£Œìˆ˜");
+	JButton btn2 = new JButton("ìŒì‹");
+	JButton confirm = new JButton("í™•ì¸");
+	JButton cancel = new JButton("ì·¨ì†Œ");
 	
 	public void getFoodPanel(Main_Activity ma, Make_Room mr, int flag )
 	{	
@@ -42,83 +42,83 @@ public class Button_Actioned {
 			shu2[j] = new Shuju2();
 		}
 		
-		Button btn1 = new Button("À½·á¼ö");
-		Button btn2 = new Button("À½½Ä");
+		Button btn1 = new Button("ìŒë£Œìˆ˜");
+		Button btn2 = new Button("ìŒì‹");
 		JDialog dialog = new JDialog(ma,"My dialog");
-		 Label lab1 = new Label("¼±ÅÃÇÏ¼¼¿ä");
+		 Label lab1 = new Label("ì„ íƒí•˜ì„¸ìš”");
 		 JCheckBox jcb1 = new JCheckBox();
-		 jcb1.add(new JLabel("     ¿¡½ºÇÁ·¹¼Ò1500"));
+		 jcb1.add(new JLabel("     ì—ìŠ¤í”„ë ˆì†Œ1500"));
 		 JCheckBox jcb2 = new JCheckBox();
-		 jcb2.add(new JLabel("     ¾Æ¸Ş¸®Ä«³ë2000"));
+		 jcb2.add(new JLabel("     ì•„ë©”ë¦¬ì¹´ë…¸2000"));
 		  JCheckBox cb3 = new JCheckBox();
-		  cb3.add(new JLabel("     ´õÄ¡1500"));
-		  JCheckBox cb4 = new JCheckBox("Ä«Æä¶ó¶¼2500");
+		  cb3.add(new JLabel("     ë”ì¹˜1500"));
+		  JCheckBox cb4 = new JCheckBox("ì¹´í˜ë¼ë–¼2500");
 		
-		  Button btn3 = new Button("È®ÀÎ");
+		  Button btn3 = new Button("í™•ì¸");
 		  Container ct2 = ma.getContentPane();
-		  Button btn19= new Button("°è»ê");
-		  Label lab13=new Label("ÃÑ °¡°İ:");
+		  Button btn19= new Button("ê³„ì‚°");
+		  Label lab13=new Label("ì´ ê°€ê²©:");
 		  
 		  
 		 
 		  JDialog dialog2 = new JDialog(ma,"My dialog2");
-		  Label lab2 = new Label("¼±ÅÃÇÏ¼¼¿ä");
-		  JCheckBox cb12 = new JCheckBox("¾ÖÇÃÅ¸¸£Æ®1500");
-		  JCheckBox cb22 = new JCheckBox("ÄíÅ°½´2000");
-		  JCheckBox cb32 = new JCheckBox("½ºÆ½ÄÉÀÍ1500");
-		  JCheckBox cb42 = new JCheckBox("Ä¡ÁîÅ¸¸£Æ®2500");
+		  Label lab2 = new Label("ì„ íƒí•˜ì„¸ìš”");
+		  JCheckBox cb12 = new JCheckBox("ì• í”Œíƒ€ë¥´íŠ¸1500");
+		  JCheckBox cb22 = new JCheckBox("ì¿ í‚¤ìŠˆ2000");
+		  JCheckBox cb32 = new JCheckBox("ìŠ¤í‹±ì¼€ìµ1500");
+		  JCheckBox cb42 = new JCheckBox("ì¹˜ì¦ˆíƒ€ë¥´íŠ¸2500");
 
-		  Button btn4 = new Button("È®ÀÎ");
+		  Button btn4 = new Button("í™•ì¸");
 		  
 		  Container ct = ma.getContentPane();
-		  Button btn9= new Button("°è»ê");
-		  Label lab3=new Label("ÃÑ °¡°İ:");
+		  Button btn9= new Button("ê³„ì‚°");
+		  Label lab3=new Label("ì´ ê°€ê²©:");
 		  
 		
 		  ImageIcon source_esspresso = new ImageIcon("src/images/esspresso.jpg"); 
-		  Image ess = source_esspresso.getImage(); //imageiconÀ» image·Î º¯È¯
-		  Image change_ess=ess.getScaledInstance(100,100,Image.SCALE_SMOOTH);  ////¿¡½ºÇÁ·¹¼Ò
+		  Image ess = source_esspresso.getImage(); //imageiconì„ imageë¡œ ë³€í™˜
+		  Image change_ess=ess.getScaledInstance(100,100,Image.SCALE_SMOOTH);  ////ì—ìŠ¤í”„ë ˆì†Œ
 		  ImageIcon change_esspresso=new ImageIcon(change_ess);
 		  JLabel lbl_ess=new JLabel();
 			 
 		  ImageIcon source_americano = new ImageIcon("src/images/americano.jpg"); 
-		  Image ame = source_americano.getImage(); //imageiconÀ» image·Î º¯È¯
+		  Image ame = source_americano.getImage(); //imageiconì„ imageë¡œ ë³€í™˜
 		  Image change_ame=ame.getScaledInstance(100,100,Image.SCALE_SMOOTH);
 		  ImageIcon change_americano=new ImageIcon(change_ame);
 		  JLabel lbl_ame=new JLabel();
 		  
 		  ImageIcon source_dutch = new ImageIcon("src/images/dutch.jpg"); 
-		  Image dutch = source_dutch.getImage(); //imageiconÀ» image·Î º¯È¯
+		  Image dutch = source_dutch.getImage(); //imageiconì„ imageë¡œ ë³€í™˜
 		  Image change_dut=dutch.getScaledInstance(100,100,Image.SCALE_SMOOTH);
 		  ImageIcon change_dutch=new ImageIcon(change_dut);
 		  JLabel lbl_dutch=new JLabel();
 		  
 		  ImageIcon source_cafelatte = new ImageIcon("src/images/cafelatte.jpg"); 
-		  Image cafe = source_cafelatte.getImage(); //imageiconÀ» image·Î º¯È¯
+		  Image cafe = source_cafelatte.getImage(); //imageiconì„ imageë¡œ ë³€í™˜
 		  Image change_cafe=cafe.getScaledInstance(100,100,Image.SCALE_SMOOTH);
 		  ImageIcon change_cafelatte=new ImageIcon(change_cafe);
 		  JLabel lbl_cafelatte=new JLabel();
 		  
 		  ImageIcon source_apple = new ImageIcon("src/images/appletarrt.jpg"); 
-		  Image apple = source_apple.getImage(); //imageiconÀ» image·Î º¯È¯
+		  Image apple = source_apple.getImage(); //imageiconì„ imageë¡œ ë³€í™˜
 		  Image change_apple=apple.getScaledInstance(100,100,Image.SCALE_SMOOTH);
 		  ImageIcon change_appletarrt=new ImageIcon(change_apple);
 		  JLabel lbl_appletarrt=new JLabel();
 		  
 		  ImageIcon source_cookie = new ImageIcon("src/images/cookiesu.png"); 
-		  Image cookie = source_cookie.getImage(); //imageiconÀ» image·Î º¯È¯
+		  Image cookie = source_cookie.getImage(); //imageiconì„ imageë¡œ ë³€í™˜
 		  Image change_cookie=cookie.getScaledInstance(100,100,Image.SCALE_SMOOTH);
 		  ImageIcon change_cookiesu=new ImageIcon(change_cookie);
 		  JLabel lbl_cookiesu=new JLabel();
 		  
 		  ImageIcon source_stick = new ImageIcon("src/images/stickcake.jpg"); 
-		  Image stick = source_stick.getImage(); //imageiconÀ» image·Î º¯È¯
+		  Image stick = source_stick.getImage(); //imageiconì„ imageë¡œ ë³€í™˜
 		  Image change_stick=stick.getScaledInstance(100,100,Image.SCALE_SMOOTH);
 		  ImageIcon change_stickcake=new ImageIcon(change_stick);
 		  JLabel lbl_stickcake=new JLabel();
 		  
 		  ImageIcon source_cheese = new ImageIcon("src/images/cheesetarrt.jpg"); 
-		  Image cheese = source_cheese.getImage(); //imageiconÀ» image·Î º¯È¯
+		  Image cheese = source_cheese.getImage(); //imageiconì„ imageë¡œ ë³€í™˜
 		  Image change_cheese=cheese.getScaledInstance(100,100,Image.SCALE_SMOOTH);
 		  ImageIcon change_cheesetarrt=new ImageIcon(change_cheese);
 		  JLabel lbl_cheesetarrt=new JLabel();
@@ -263,9 +263,9 @@ public class Button_Actioned {
 	   	            if( cb4.isSelected())
 	       			      shu[flag].amount += 2500;
 	   	           
-	   	       		 lab3.setText("ÃÑ °¡°İ:" +Integer.toString(shu[flag].amount));
+	   	       		 lab3.setText("ì´ ê°€ê²©:" +Integer.toString(shu[flag].amount));
 	   	       		 shu[flag].setTotalPrice(shu[flag].getTotalPrice() +shu[flag]. amount);
-	   	       		 // µğ¹ö±×. È®ÀÎ¿ë...
+	   	       		 // ë””ë²„ê·¸. í™•ì¸ìš©...
 	   	       		 System.out.println(shu[flag].getTotalPrice());
 	   	       	     dialog.setVisible(true);
 	   	       		 
@@ -290,9 +290,9 @@ public class Button_Actioned {
 	   	            if( cb42.isSelected())
 	       			      shu2[flag].amount2 += 2500;
 	   	           
-	   	       		 lab13.setText("ÃÑ °¡°İ:" +Integer.toString(shu2[flag].amount2));
+	   	       		 lab13.setText("ì´ ê°€ê²©:" +Integer.toString(shu2[flag].amount2));
 	   	       		 shu2[flag].setTotalPrice(shu2[flag].getTotalPrice() +shu2[flag]. amount2);
-	   	       		 // µğ¹ö±×. È®ÀÎ¿ë...
+	   	       		 // ë””ë²„ê·¸. í™•ì¸ìš©...
 	   	       		 System.out.println(shu2[flag].getTotalPrice());
 	   	       	     dialog2.setVisible(true);
 	   	       		 
@@ -317,8 +317,7 @@ public class Button_Actioned {
 			 }
 
 	
-			 ma.setLayout(null);
-			 ma.setSize(500,200);
+			
 			 ma.setBackground(Color.yellow);
 			 btn1.addActionListener(new MyListener());
 			 btn9.addActionListener(new MyListener());
@@ -327,13 +326,6 @@ public class Button_Actioned {
 			 btn3.addActionListener(new MyListener());
 			 btn4.addActionListener(new MyListener());
 			 btn2.addActionListener(new MyListener());
-			 btn1.setBounds(100,80,100,50);
-			 ma.add(btn1);
-			 ma.add(btn2);
-		     btn2.setBounds(300,80,100,50);
-			 ma.setVisible(true);
-			 btn1.setBounds(150, 60, 100, 50);
-				btn2.setBounds(530, 60, 100, 50);
 				ma.foodPanels[flag].add(btn1);
 				ma.foodPanels[flag].add(btn2);
 				ma.frame.add(ma.foodPanels[flag]);
@@ -366,19 +358,19 @@ public class Button_Actioned {
 		JPanel announce = new JPanel();
 		//announce.setLayout(null);
 		announce.setSize(400, 200);
-		finalPrice = finalPrice + shu[flag].getTotalPrice();
-		JLabel finalPriceOutput = new JLabel("°è»êÇÒ ºñ¿ë : " + finalPrice);
+		finalPrice = finalPrice + shu[flag].getTotalPrice() + shu2[flag].getTotalPrice();
+		JLabel finalPriceOutput = new JLabel("ê³„ì‚°í•  ë¹„ìš© : " + finalPrice);
 		finalPriceOutput.setBackground(Color.white);
-		finalPriceOutput.setFont(new Font("¸¼Àº °íµñ", Font.PLAIN, 30));
+		finalPriceOutput.setFont(new Font("ë§‘ì€ ê³ ë”•", Font.PLAIN, 30));
 		announce.add(finalPriceOutput);
 		
 		JPanel bottomAnnounce = new JPanel();
 		bottomAnnounce.setSize(400, 100);
 		
-		// calFinish ¹öÆ°
+		// calFinish ë²„íŠ¼
 		JButton calFinish = new JButton();
 		calFinish.setBounds(300, 300, 200, 100);
-		calFinish.add(new JLabel("È®ÀÎ(²À ´­·¯ÁÖ¼¼¿ä!)"));
+		calFinish.add(new JLabel("í™•ì¸(ê¼­ ëˆŒëŸ¬ì£¼ì„¸ìš”!)"));
 		bottomAnnounce.add(calFinish);
 		
 		confirmPanel.add(announce);
@@ -393,6 +385,8 @@ public class Button_Actioned {
 			public void actionPerformed(ActionEvent e) {
 				shu[flag].setTotalPrice(0);
 				shu[flag].amount = 0;
+				shu2[flag].setTotalPrice(0);
+				shu2[flag].amount2 = 0;
 				confirmfrm.setVisible(false);
 				//System.out.println("Calculation Completed!!");
 			}
@@ -400,4 +394,3 @@ public class Button_Actioned {
 	}
 
 }
-	

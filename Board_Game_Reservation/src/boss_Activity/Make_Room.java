@@ -21,7 +21,7 @@ public class Make_Room {
 	
 	Shuju shu = new Shuju();
 	
-	void setButton(Main_Activity ma, Rooms newRoom, int xpos, int ypos, int flag)
+	void setButton(ImageIcon img, Main_Activity ma, Rooms newRoom, int xpos, int ypos, int flag)
 	{	
 		// 이름 저장공간
 		JTextField name1 = new JTextField(15);
@@ -114,8 +114,16 @@ public class Make_Room {
 		//ma.foodPanels[flag].setVisible(false);
 		//ma.frame.getContentPane().add(ma.foodPanels[flag]);		// 첨수꺼 frame에 추가
 		
-		JButton room = new JButton("방 " + (flag + 1));
-		//roomGlobal = room;
+		/*
+		ImageIcon source_esspresso = new ImageIcon("src/images/esspresso.jpg"); 
+		  Image ess = source_esspresso.getImage(); //imageicon을 image로 변환
+		  Image change_ess=ess.getScaledInstance(100,100,Image.SCALE_SMOOTH);  ////에스프레소
+		*/
+		
+		String roomName = new String("방" + (flag + 1));
+		JButton room = new JButton(roomName, img);
+		room.setForeground(Color.WHITE);
+		room.setHorizontalTextPosition(JButton.CENTER); 
 		JButton roomres = new JButton("");
 		//roomresGlobal = roomres;
 		roomres.setVisible(false);
